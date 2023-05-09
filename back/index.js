@@ -4,6 +4,8 @@ import cors from 'cors'
 import path from 'path'
 import routes from './routes/index.js'
 
+mongoose.set('strictQuery', false)
+
 mongoose
 	.connect(
 		'mongodb+srv://nikolas:q9e7t5kol9mad@cluster0.yd7u5br.mongodb.net/game-shop?retryWrites=true&w=majority'
