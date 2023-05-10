@@ -3,8 +3,11 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 import path from 'path'
 import routes from './routes/index.js'
+import { fileURLToPath } from 'url'
 
 mongoose.set('strictQuery', false)
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 mongoose
 	.connect(
